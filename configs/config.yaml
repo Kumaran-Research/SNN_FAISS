@@ -1,0 +1,40 @@
+# SNN_FAISS Configuration
+# Training and evaluation parameters
+
+# Training parameters
+training:
+  epochs: 24
+  batch_size: 16
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  temperature: 0.2
+  embedding_dim: 512
+  dropout: 0.1
+  read_k_fraction: 0.2
+
+# Model parameters
+model:
+  hidden_dims: [256, 128]
+  tau_mem: 12.0
+  v_th: 0.9
+  dropout: 0.02
+
+# Data parameters
+data:
+  time_steps: 60
+  image_size: 224
+  spike_encoding: "rate"  # or "temporal"
+
+# Paths (relative to project root)
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  results: "results"
+  experiments: "experiments"
+  figures: "figures"
+
+# Evaluation parameters
+evaluation:
+  recall_at_k: [1, 5, 10]
+  cross_modal: true
+  noise_levels: [0.0, 0.1, 0.2, 0.5]
