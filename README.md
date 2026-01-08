@@ -17,6 +17,10 @@ The integration with FAISS enables scalable similarity search across large memor
 ## Method Overview
 
 ### Architecture
+
+![SNN_FAISS](https://github.com/user-attachments/assets/e7fcb7b0-c5ce-487e-881d-38acf437a8df)
+
+
 - **SNN Encoder**: Dual encoders for images and text using Leaky Integrate-and-Fire neurons
 - **Temporal Encoding**: 60-timestep spike trains capture temporal dynamics
 - **Contrastive Learning**: NT-Xent loss aligns multimodal embeddings
@@ -160,3 +164,4 @@ This work demonstrates that SNNs can outperform traditional approaches in episod
 
 MIT License - see LICENSE file for details.
 #
+
